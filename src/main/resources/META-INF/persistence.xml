@@ -4,10 +4,13 @@
              xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence
              https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
              version="3.0">
-    <persistence-unit name="productPU" transaction-type="RESOURCE_LOCAL">
+    <persistence-unit name="product-crud" transaction-type="RESOURCE_LOCAL">
         <class>uz.pdp.productcrud2.entity.Product</class>
         <class>uz.pdp.productcrud2.entity.ProductType</class>
         <class>uz.pdp.productcrud2.entity.ProductStatus</class>
+
+
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
 
         <properties>
             <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>

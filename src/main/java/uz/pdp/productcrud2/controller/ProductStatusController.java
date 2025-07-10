@@ -12,14 +12,14 @@ import uz.pdp.productcrud2.entity.ProductStatus;
 import java.util.List;
 
 @Path("/product-status")
-@Produces(MediaType.APPLICATION_JSON)
-@Consumes(MediaType.APPLICATION_JSON)
 public class ProductStatusController {
 
     @Inject
     private ProductStatusService productStatusService;
 
     @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
     public List<ProductStatus> getAll() {
         return productStatusService.findAll();
     }

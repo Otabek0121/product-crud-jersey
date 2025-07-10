@@ -15,7 +15,7 @@ public class ProductRepository {
     private final EntityManager em;
 
     public ProductRepository() {
-        this.em = Persistence.createEntityManagerFactory("default").createEntityManager();
+        this.em = Persistence.createEntityManagerFactory("product-crud").createEntityManager();
     }
 
     public Product save(Product product) {

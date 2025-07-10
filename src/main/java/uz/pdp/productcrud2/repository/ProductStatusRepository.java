@@ -15,7 +15,7 @@ public class ProductStatusRepository {
     private final EntityManager em;
 
     public ProductStatusRepository(EntityManager em) {
-        this.em = Persistence.createEntityManagerFactory("default").createEntityManager();
+        this.em = Persistence.createEntityManagerFactory("product-crud").createEntityManager();
     }
 
     public ProductStatus save(ProductStatus productStatus) {
